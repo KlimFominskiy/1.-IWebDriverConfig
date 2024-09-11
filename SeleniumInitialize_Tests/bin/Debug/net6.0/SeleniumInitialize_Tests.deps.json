@@ -345,7 +345,10 @@
           "Selenium.WebDriver": "4.17.0"
         },
         "runtime": {
-          "SeleniumInitialize_Builder.dll": {}
+          "SeleniumInitialize_Builder.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
