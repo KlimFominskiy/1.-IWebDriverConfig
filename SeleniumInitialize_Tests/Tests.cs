@@ -49,5 +49,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(driver.Manage().Timeouts().ImplicitWait, Is.EqualTo(timeout));
             Assert.That(_builder.Timeout, Is.EqualTo(timeout));
         }
+
+      
     }
 }
