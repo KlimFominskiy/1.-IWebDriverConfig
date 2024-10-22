@@ -7,20 +7,10 @@ namespace SeleniumInitialize_Tests
     public class Tests
     {
         private SeleniumBuilder _builder;
-
         [SetUp]
         public void Setup()
         {
             _builder = new SeleniumBuilder();
-        }
-
-        [TearDown]
-        public void Teardown()
-        {
-            if (!_builder.IsDisposed)
-            {
-                _builder.Dispose();
-            }
         }
 
         [Test(Description = "Проверка корректной инициализации экземпляра IWebDriver")]
@@ -37,7 +27,7 @@ namespace SeleniumInitialize_Tests
             Assert.IsFalse(_builder.IsDisposed);
             _builder.Dispose();
             Assert.IsTrue(_builder.IsDisposed);
-            var processes = Process.GetProcessesByName("chromedriver.exe");
+            var processes = Process.GetProcesses("chromedriver.exe");
             Assert.IsFalse(processes.Any());
         }
 
