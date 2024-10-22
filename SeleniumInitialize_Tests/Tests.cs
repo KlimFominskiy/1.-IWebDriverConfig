@@ -27,7 +27,7 @@ namespace SeleniumInitialize_Tests
             Assert.IsFalse(_builder.IsDisposed);
             _builder.Dispose();
             Assert.IsTrue(_builder.IsDisposed);
-            var processes = Process.GetProcesses("chromedriver.exe");
+            var processes = Process.GetProcessesByName("chromedriver.exe");
             Assert.IsFalse(processes.Any());
         }
 
